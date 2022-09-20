@@ -9,6 +9,11 @@ abstract class Data implements Arrayable, Jsonable
 {
     use HasAttributes;
 
+    public function __construct(array $attributes = [])
+    {
+        $this->setAttributes($attributes);
+    }
+
     /**
      * @param array $attributes
      * @return Data
